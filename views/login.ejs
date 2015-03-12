@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/styles/style.css' />
+  </head>
+  <body>
+  <form action="login" method="post" autocomplete="on">
+      <table>
+          <caption>Login</caption>
+          <tr><th>User ID</th>
+              <td><input type="text" pattern="\d{2}\w{3}\d{4}" required></td></tr>
+          <tr><th>Password</th>
+              <td><input type="password" required autocomplete="off"></td></tr>
+          <td><input type="submit" value="Login"></td></tr>
+      </table>
+      <p><b>Not a user, Don't worry! Sign up for free!</b></p>
+      <button type="button"><a href="signup.html"><b>Sign Up</b></a></button>
+  </form>
+  </body>
+</html>
