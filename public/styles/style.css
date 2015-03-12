@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    align-self: center;
 }
 
 a {
@@ -8,6 +9,7 @@ a {
 }
 table{
     border : 5px solid black;
+    align-self: center;
 }
 p{
     text-shadow : 2px 2px 2px gray;
