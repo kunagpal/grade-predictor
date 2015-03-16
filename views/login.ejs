@@ -6,6 +6,7 @@
   </head>
   <body>
   <form action="login" method="post" autocomplete="on">
+      <input type="hidden" name="_csrf" value=<%= token%>>
       <table>
           <caption>Login</caption>
           <tr><th>User ID</th>
