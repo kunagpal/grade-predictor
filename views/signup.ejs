@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup</title>
+    <link rel='stylesheet' href='/styles/style.css' />
+  </head>
+  <body>
+    <form action="signup" method="post" autocomplete="on">
+      <input type="hidden" name="_csrf" value=<%= token%>>
+      <table align="left">
+          <caption>Signup</caption>
+          <tr><th>First Name</th>
+              <td><input type="text" name="fname" value="" required></td></tr>
+          <tr><th>Middle Name</th>
+              <td><input type="text" name="mname" value="" ></td></tr>
+          <tr><th>Last Name</th>
+              <td><input type="text" name="lname" value="" required></td></tr>
+          <tr><th>Register No.</th>
+              <td><input type="text" name="UID" pattern="\d{2}\w{3}\d{4}" required></td>
+              <td>(This will be your User ID)</td></tr>
+          <tr><th>Password</th>
+              <td><input type="password" name="password" required autocomplete="off"></td></tr>
+          <tr><th>Retype Password</th>
+              <td><input type="password" name="pass" required autocomplete="off"></td></tr>
+          <tr><th>Date of Birth</th>
+              <td><input type="date" name="dob" value="" required></td></tr>
+          <tr align="center"><td><input type="submit" value="Signup"></td></tr>
+      </table>
+    </form>
+  </body>
+</html>
