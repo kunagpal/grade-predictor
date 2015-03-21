@@ -10,4 +10,4 @@ The source code repository for the grade-predictor initiative.
 * Run the localhost MongoDB server 'mongod'
 * Navigate to the project directory, and install all dependencies using 'npm install'
 * Run the server using 'npm start'
-* View the website at localhost:3000
+* View the website at localhost:2000
