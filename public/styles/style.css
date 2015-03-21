@@ -7,16 +7,15 @@ body {
 a {
   color: #00B7FF;
 }
-table{
-    border : 5px solid black;
-    align-self: center;
-}
-p{
-    text-shadow : 2px 2px 2px gray;
-}
+
 a:visited {
     color : black;
 }
 a:hover {
     color : black;
+}
+#bt {margin: 20px;
+}
+#uid, #pswd {
+    width : 300px;
 }

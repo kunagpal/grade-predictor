@@ -18,18 +18,29 @@
 
   <form action="login" method="post" autocomplete="on" role="form" class="form-horizontal">
 
-          <h1>Login</h1>
-      <div class="form-group">
+      <h2 style="margin-left: 200px;margin-bottom: 40px">Login</h2>
+      <div class="form-group" width="80%">
+
           <label for="userid" class="col-sm-2 control-label">User ID</label>
           <div class="col-sm-10">
-              <input type="text" class="form-control" id="userid" placeholder="Enter User ID" pattern="\d{2}\w{3}\d{4}" required>
+              <input type="text" id="uid" class="form-control" id="userid" placeholder="Enter User ID" pattern="\d{2}\w{3}\d{4}"   required>
           </div>
       </div>
 
       <div class="form-group">
           <label for="pwd" class="col-sm-2 control-label">Password</label>
           <div class="col-sm-10">
-              <input type="password" class="form-control" id="pwd" placeholder="Enter Password" autocomplete="off" required>
+              <input type="password" id="pswd" class="form-control" id="pwd" placeholder="Enter Password" autocomplete="off" required>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                  <label>
+                      <input type="checkbox">Remember me
+                  </label>
+              </div>
           </div>
       </div>
       <div class="form-group">
@@ -39,7 +50,7 @@
       </div>
 
       <p><b>Not a user? Don't worry! Sign up for free!</b></p>
-      <button type="button" class="btn btn-info"><a href="/signup"><b>Sign Up</b></a></button>
+      <button type="button" id="bt" class="btn btn-default"><a href="/signup"><b>Sign Up</b></a></button>
   </form>
       </div>
   </body>
