@@ -8,8 +8,17 @@
 }
 
 li {
-    float: right;
-    display: inline-block;
     position: relative;
-    margin-right: 100px;
+    display: inline-block;
+    float: right;
+    text-align: -webkit-match-parent;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
 }
