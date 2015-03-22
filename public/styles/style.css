@@ -19,3 +19,11 @@ a:hover {
 #uid, #pswd {
     width : 300px;
 }
+#jum {
+    border: 5px solid black;
+
+}
+#si {
+    width: 200px;
+    text-align: center;
+}
