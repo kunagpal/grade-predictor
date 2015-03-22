@@ -3,19 +3,49 @@
   <head>
     <title>Login</title>
     <link rel='stylesheet' href='/styles/style.css' />
+    <link rel='stylesheet' href='/styles/min.css' />
+    <script type="text/javascript" src="/scripts/min.js"></script>
   </head>
   <body>
-  <form action="login" method="post" autocomplete="on">
-      <table>
-          <caption>Login</caption>
-          <tr><th>User ID</th>
-              <td><input type="text" pattern="\d{2}\w{3}\d{4}" required></td></tr>
-          <tr><th>Password</th>
-              <td><input type="password" required autocomplete="off"></td></tr>
-          <td><input type="submit" value="Login"></td></tr>
-      </table>
-      <p><b>Not a user, Don't worry! Sign up for free!</b></p>
-      <button type="button"><a href="signup.html"><b>Sign Up</b></a></button>
+  <div class="jumbotron">
+
+
+  <form action="login" method="post" autocomplete="on" role="form" class="form-horizontal">
+
+      <h1 style="margin-left: 200px;margin-bottom: 40px"><span class="label label-info">Login</span></h1>
+      <div class="form-group" width="90%">
+
+          <label for="userid" class="col-sm-2 control-label">User ID</label>
+          <div class="col-sm-10">
+              <input type="text" id="uid" class="form-control" id="userid" placeholder="Enter User ID" pattern="\d{2}\w{3}\d{4}"   required>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="pwd" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+              <input type="password" id="pswd" class="form-control" id="pwd" placeholder="Enter Password" autocomplete="off" required>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                  <label>
+                      <input type="checkbox">Remember me
+                  </label>
+              </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+          </div>
+      </div>
+
+      <p style="padding-left: 20px"><b>Not a user? Don't worry! Sign up for free!</b></p>
+      <button type="button" id="bt" class="btn btn-default"><a href="/signup"><b>Sign Up</b></a></button>
   </form>
+      </div>
   </body>
 </html>

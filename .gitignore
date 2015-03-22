@@ -5,3 +5,4 @@ node_modules/
 *.log
 public/scripts/min.js
 public/styles/min.css
+key.js
