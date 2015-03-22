@@ -1,5 +1,4 @@
-var express = require('express');
-var router = express.Router();
+var router = require('express').Router();
 var temp;
 
 // GET users listing.
@@ -26,11 +25,6 @@ router.get('/developers', function(req, res){
     res.render('developers');
 });
 
-//GET forgot page
-router.get('/forgot', function(req, res){
-    res.render('forgot', {token : req.csrfToken()});
-});
-
 //GET logout page
 router.get('/logout', function(req, res){
     if(req.signedCookies.name)
@@ -55,14 +49,14 @@ router.get('/details', function(req, res) {
 });
 
 // GET grade page
-router.get('/details', function(req, res) {
+router.get('/grade', function(req, res) {
     temp = req.session.msg ? req.session.msg : 0;
     delete req.session.msg;
     res.render('grade', {token : req.csrfToken(), msg : temp});
 });
 
 // GET prediction page
-router.get('/details', function(req, res) {
+router.get('/predict', function(req, res) {
     temp = req.session.msg ? req.session.msg : 0;
     delete req.session.msg;
     res.render('predict', {token : req.csrfToken(), msg : temp});
@@ -75,15 +69,15 @@ router.get('/home', function(req, res) {
     res.render('home', {token : req.csrfToken(), msg : temp});
 });
 
+router.get('/reset', function(req, res){
+    temp = req.session.msg ? req.session.msg : 0;
+    delete req.session.msg;
+    res.render('reset', {token : req.csrfToken(), msg : temp});
+});
+
 // Generic get route request handler
 router.get(/\/.*/, function(req, res) {
   res.render('index');
-});
-
-router.get('/reset', function(req, res){
-   temp = req.session.msg ? req.session.msg : 0;
-   delete req.session.msg;
-   res.render('reset', {token : req.csrfToken(), msg : temp});
 });
 
 module.exports = router;
