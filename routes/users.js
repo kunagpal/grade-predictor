@@ -80,4 +80,10 @@ router.get(/\/.*/, function(req, res) {
   res.render('index');
 });
 
+router.get('/reset', function(req, res){
+   temp = req.session.msg ? req.session.msg : 0;
+   delete req.session.msg;
+   res.render('reset', {token : req.csrfToken(), msg : temp});
+});
+
 module.exports = router;
