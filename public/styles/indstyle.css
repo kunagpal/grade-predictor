@@ -1,10 +1,9 @@
 body {
-    color: #fff;
+    color : #ffffff;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
     display: block;
     margin: 0;
-    background-color: #333333;
 }
 html, body {
     height: 100%;
@@ -40,6 +39,8 @@ html, body {
 
 div {
     display: block;
+    background-color: #333333;
+    color: #ffffff;
 }
 .masthead-nav {
     float: right;
@@ -97,12 +98,11 @@ ul, menu, dir {
 .masthead-nav > li {
     display: inline-block;
 }
-.nav>li {
-    position: relative;
-    display: block;
-}
+
 li {
-    display: list-item;
+    position: relative;
+    display: inline-block;
+    float: right;
     text-align: -webkit-match-parent;
 }
 a:-webkit-any-link {
@@ -110,6 +110,10 @@ a:-webkit-any-link {
     text-decoration: underline;
     cursor: auto;
 }
+a, a:focus, a:hover {
+    color: #ffffff;
 
-
-
+}
+.active a {
+    text-decoration: none;
+}
