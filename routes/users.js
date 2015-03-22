@@ -4,28 +4,14 @@ var temp;
 
 // GET users listing.
 router.get('/grade', function(req, res){
-    if(req.signedCookies.name)
-    {
         res.render('grade');
-    }
-    else
-    {
-        res.redirect('/login');
-    }
 });
 
 //GET login page
 router.get('/login', function(req, res){
-    if(req.signedCookies.name)
-    {
-        res.redirect('/');
-    }
-    else
-    {
         temp = req.session.msg ? req.session.msg : 0;
         delete req.session.msg;
         res.render('login', {token : req.csrfToken(), msg : temp});
-    }
 });
 
 //GET signup page

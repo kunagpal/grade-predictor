@@ -15,7 +15,7 @@ catch(err){
 var email = require('nodemailer').createTransport({
     service: 'Gmail',
     auth: {
-        user: 'test@gmail.com',
+        user: 'gradepredictor@gmail.com',
         pass: process.env.PASSWORD || key
     }
 });
