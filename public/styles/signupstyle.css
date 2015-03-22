@@ -1,0 +1,30 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    align-self: center;
+}
+
+a {
+    color: #00B7FF;
+}
+
+a:visited {
+    color : black;
+}
+a:hover {
+    color : black;
+}
+#bt {margin: 20px;
+}
+#fname, #mname, #lname, #rno, #pwd, #rpwd, #dob {
+    width : 300px;
+}
+#jum {
+    margin: 10px;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+    padding-left: 300px;
+}
+#si {
+    width: 200px;
+    text-align: center;
+}
