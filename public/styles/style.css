@@ -16,6 +16,11 @@ a:hover {
 }
 #bt {margin: 20px;
 }
-#uid, #pswd {
+#uid, #pswd, #fname, #mname,#lname, #rno, #pwd, #rpwd, #dob {
     width : 300px;
+}
+
+td{
+    margin: 20px;
+    padding: 25px;
 }
