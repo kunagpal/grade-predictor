@@ -3,6 +3,5 @@
 node_modules/
 *.db
 *.log
-public/scripts/min.js
-public/styles/min.css
 key.js
+public/bower_components

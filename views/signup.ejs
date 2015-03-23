@@ -3,8 +3,9 @@
   <head>
     <title>Signup</title>
     <link rel='stylesheet' href='/styles/signupstyle.css' />
-    <link rel='stylesheet' href='/styles/min.css' />
-    <script type="text/javascript" src="/scripts/min.js"></script>
+    <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css' />
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/css/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="jumbotron" id="jum" >
@@ -49,6 +50,13 @@
                     <label for="rpwd" class="col-sm-2 control-label">Re-type Password</label>
                     <div class="col-sm-10">
                         <input type="password" id="rpwd" class="form-control" placeholder="Re-enter Password" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group" width="90%">
+                    <label for="email" class="col-sm-2 control-label">Email ID</label>
+                    <div class="col-sm-10">
+                        <input type="email" id="email" class="form-control" placeholder="Enter Email ID" required>
                     </div>
                 </div>
                 <br>

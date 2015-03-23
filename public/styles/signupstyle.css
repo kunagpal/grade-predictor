@@ -16,7 +16,7 @@ a:hover {
 }
 #bt {margin: 20px;
 }
-#fname, #mname, #lname, #rno, #pwd, #rpwd, #dob {
+#fname, #mname, #lname, #rno, #pwd, #rpwd, #dob, #email, #eid {
     width : 300px;
 }
 #jum {
