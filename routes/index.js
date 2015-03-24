@@ -91,7 +91,7 @@ router.post('/login', function(req, res) {
         }
         else
         {
-            db.collection('users').findOne({_id : req.body.name}, function(err, doc){
+            db.collection('users').findOne({_id : req.body.id}, function(err, doc){
                 db.close();
                 if(err)
                 {
@@ -105,7 +105,7 @@ router.post('/login', function(req, res) {
                 {
                     if (bcrypt.compareSync(req.body.password, doc.hash))
                     {
-                        res.cookie('name', req.body.name, {maxAge: 86400000, signed: true});
+                        res.cookie('name', req.body.id, {maxAge: 86400000, signed: true});
                         res.redirect('/');
                     }
                     else
@@ -139,8 +139,8 @@ router.post('/signup', function(req, res) {
                         console.log(num);
                         db.close(function(){
                             var user = {
-                                _id : req.body.name,
-                                dob : new Date(),
+                                _id : req.body.id,
+                                dob : req.body.dob,
                                 num : parseInt(num) + 1,
                                 hash : bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10)),
                                 email : req.body.email
@@ -191,19 +191,19 @@ router.post('/forgot', function(req, res) {
             crypto.randomBytes(20, function(err, buf) {
                 var token = buf.toString('hex');
                 var options = {
-                    from: 'sudokuchampster@gmail.com',
+                    from: 'gradepredictor@gmail.com',
                     to : req.body.email,
                     subject: 'Time to get back in the game',
-                    text: 'Hey there, ' + req.body.name + '\n' + 'A little birdie told us that you were having troubles with your password.\n'
+                    text: 'Hey there, ' + req.body.id + '\n' + 'A little birdie told us that you were having troubles with your password.\n'
                     + 'That really hurts us, so please click on http://' + req.headers.host + '/reset/' + token + ' within sixty minutes of seeing this message in order to' +
                     ' reset your password.\nWe would love to have you back as a user.\n In the event that this password reset was not requested by you, please ignore this' +
                     ' message and your password shall remain intact.'
                 };
-                db.collection('users').findAndModify({email : req.body.email, _id : req.body.name}, [], {$set:{token : token, expire : Date.now() + 3600000}}, {}, function(err, doc){
+                db.collection('users').findAndModify({email : req.body.email, _id : req.body.id}, [], {$set:{token : token, expire : Date.now() + 3600000}}, {}, function(err, doc){
                     db.close();
                     if(err)
                     {
-                        console.log(err.message);
+                        console.log(err.message);x
                     }
                     else if(!doc)
                     {
@@ -257,6 +257,7 @@ router.post('/reset/:token', function(req, res) {
                     else
                     {
                         var options = {
+                            from: 'gradepredictor@gmail.com',
                             to : doc.email,
                             subject : 'Password change successful !',
                             text : 'Hey there, ' + doc._id + '.\nWe\'re just writing in to let you know that the recent password change for your account was successful.'
