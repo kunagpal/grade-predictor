@@ -1,10 +1,10 @@
 .featurette-divider {
     margin: 80px 0;
 }
-#img1, #img2, #img3 {
+#img1, #img3 {
     border: 5px ridge rgba(9, 8, 16, 0.13);
     padding: 5px;
-    margin: 10px;
+    margin-right: 10px;
 }
 
 li {
@@ -21,4 +21,14 @@ h3 {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-weight: bold;
+}
+#img2{
+    border: 5px ridge rgba(9, 8, 16, 0.13);
+    padding: 5px;
+    margin-left: 10px;
+
+}
+#rt {
+ float: right;
+
 }
