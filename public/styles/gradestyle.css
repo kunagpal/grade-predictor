@@ -1,0 +1,10 @@
+li {
+    position: relative;
+    display: inline-block;
+    float: right;
+    text-align: -webkit-match-parent;
+}
+a, a:focus, a:hover {
+    color: #ffffff;
+
+}
