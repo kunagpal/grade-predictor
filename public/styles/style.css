@@ -14,7 +14,8 @@ a:visited {
 a:hover {
     color : black;
 }
-#bt {margin: 20px;
+#bt {margin-left: 200px;
+    margin-top: 20px;
 }
 #uid, #pswd {
     width : 300px;
