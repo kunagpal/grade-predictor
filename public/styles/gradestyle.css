@@ -11,3 +11,7 @@ a, a:focus, a:hover {
 .container {
     margin-left: 50px;
 }
+
+.mic {
+    text-align: center;
+}
