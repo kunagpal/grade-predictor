@@ -30,6 +30,7 @@
 
               <div class="inner cover">
         <form action="signup" method="post" autocomplete="on">
+                <input type="hidden" name="_csrf" value="<%= token %>">
                 <h1 style="margin-left: 160px; margin-bottom: 30px;" align="left"><span class="label label-info">Create Profile</span></h1>
                 <div class="form-group" width="90%">
                     <label for="fname" class="col-sm-2 control-label">First Name</label>
