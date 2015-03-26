@@ -3,7 +3,7 @@ var temp;
 
 // GET users listing.
 router.get('/grade', function(req, res){
-        res.render('grade');
+        res.render('grades');
 });
 
 //GET login page
