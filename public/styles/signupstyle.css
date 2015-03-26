@@ -39,17 +39,20 @@ html, body {
 
 }
 .masthead {
-
+    position: fixed;
     top: 0;
-    margin-top: 0px;
-    max-width: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 30px;
+    max-width: 90%;
+    text-align: center;
 }
 
 .inner{
-    width: 700px;
+    width: 640px;
 }
 
-.cover{
+.cover{ 
     width: 1000px;
     height: 100%;
     text-align: center;
@@ -59,17 +62,22 @@ div {
     display: block;
     background-color: #333333;
     color: #ffffff;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .masthead-nav {
     float: right;
 }
 
-
 .mastfoot {
-    padding-top: 50px;
+    position: fixed;
+    padding-top: 5px;
     bottom: 0;
     color: rgba(255,255,255,.5);
     max-width: 100%;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .masthead-brand {
@@ -148,20 +156,39 @@ a:hover {
     color : black;
 }
 #bt {
+    width: 200px;
     margin-top: 20px;
-    margin-left: 0px;
+    margin-left: 175px;
     child-align: left;
     margin-right: 600px;
 }
 #fname, #mname, #lname, #rno, #pwd, #rpwd, #dob, #email, #eid {
     width : 300px;
 }
+
+#uid, #pswd {
+    width : 300px;
+}
+
 #jum {
     margin: 0px;
     box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
     padding-left: 300px;
 }
+
+#lbl{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 700px;
+}
+
 #si {
+    margin-top: 20px;
     width: 200px;
     text-align: center;
+    margin-right: 600px;
+}
+br{
+    margin-bottom: 5px;
+    margin-top: 5px;
 }

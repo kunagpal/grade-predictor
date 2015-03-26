@@ -2,18 +2,38 @@
 <html>
   <head>
     <title>Login</title>
-    <link rel='stylesheet' href='/styles/style.css' />
+    <link rel='stylesheet' href='/styles/signupstyle.css' />
     <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css' />
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/bower_components/bootstrap/dist/css/bootstrap.min.js"></script>
   </head>
   <body>
-  <div class="jumbotron" id="jum">
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+          <div class="cover-container">
+
+              <div class="masthead clearfix">
+                  <div class="inner">
+                      <h3 class="masthead-brand">Grade Predictor</h3>
+                      <nav>
+                          <ul class="nav masthead-nav">
+                              <li><a href="/developers" style="text-decoration: none; color: rgba(255,255,255,.75);">Contact Us</a></li>
+                              <li><a href="/signup" style="text-decoration: none; color: rgba(255,255,255,.75);">Sign Up</a></li>
+                              <li class="active" style="text-decoration: none; color: rgba(255,255,255,.75);"><a href="/login">Login</a></li>
+                              <li><a href="/index" style="text-decoration: none; color: rgba(255,255,255,.75);">Home</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+
+              <div class="inner cover">
 
 
   <form action="/login" method="post" autocomplete="on" role="form" class="form-horizontal">
 
-      <h1 style="margin-left: 200px;margin-bottom: 40px"><span class="label label-info">Login</span></h1>
+      <h1 style="margin-left: 200px;margin-bottom: 40px" align="left"><span class="label label-info">Login</span></h1>
       <div class="form-group" width="90%">
 
           <label for="uid" class="col-sm-2 control-label">User ID</label>
@@ -32,7 +52,7 @@
       <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
               <div class="checkbox">
-                  <label>
+                  <label id="lbl">
                       <input type="checkbox">Remember me
                   </label>
               </div>
@@ -45,7 +65,19 @@
       </div>
   </form>
       <button type="button" id="bt" class="btn btn-default"><a style="text-decoration: none" href="/forgot"><b>Forgot Password</b></a></button>
+  </div>
 
+  <div class="mastfoot">
+      <div class="inner">
+          <p>&copy; IWP Project Group - Vikram, Kunal and Tanuj</p>
       </div>
+  </div>
+
+  </div>
+
+  </div>
+
+  </div>
+
   </body>
 </html>
