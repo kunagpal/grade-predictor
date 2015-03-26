@@ -39,7 +39,7 @@ html, body {
 
 }
 .masthead {
-    position: fixed;
+    position: relative;
     top: 0;
     margin-right: 15px;
     margin-left: 15px;

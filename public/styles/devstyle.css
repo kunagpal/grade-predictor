@@ -2,9 +2,15 @@
     margin: 80px 0;
 }
 #img1, #img3 {
-    border: 5px ridge rgba(9, 8, 16, 0.13);
+    position: relative;
+    float: right;
     padding: 5px;
     margin-right: 10px;
+    width: auto;
+}
+
+.cover{
+    width: 700px;
 }
 
 li {
@@ -22,13 +28,26 @@ h3 {
     -webkit-margin-end: 0px;
     font-weight: bold;
 }
-#img2{
-    border: 5px ridge rgba(9, 8, 16, 0.13);
-    padding: 5px;
-    margin-left: 10px;
+#img2 {
 
+    padding: 5px;
+    margin-left: 0px;
+    clear: both;
+    float:left;
 }
+.circular {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.01);
+    -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0);
+    -moz-box-shadow: 0 0 8px rgba(255, 255, 255, 0);
+}
+
+
 #rt {
- float: right;
+    float: right;
 
 }
