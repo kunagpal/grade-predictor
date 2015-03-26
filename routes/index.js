@@ -106,7 +106,7 @@ router.post('/login', function(req, res) {
                     if (bcrypt.compareSync(req.body.password, doc.hash))
                     {
                         res.cookie('name', req.body.id, {maxAge: 86400000, signed: true});
-                        res.redirect('/');
+                        res.redirect('/home');
                     }
                     else
                     {
