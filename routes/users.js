@@ -2,7 +2,7 @@ var router = require('express').Router();
 var temp;
 
 // GET users listing.
-router.get('/grade', function(req, res){
+router.get('/grades', function(req, res){
         res.render('grades');
 });
 
@@ -48,11 +48,11 @@ router.get('/details', function(req, res) {
     res.render('details', {token : req.csrfToken(), msg : temp});
 });
 
-// GET grade page
-router.get('/grade', function(req, res) {
+// GET grades page
+router.get('/grades', function(req, res) {
     temp = req.session.msg ? req.session.msg : 0;
     delete req.session.msg;
-    res.render('grade', {token : req.csrfToken(), msg : temp});
+    res.render('grades', {token : req.csrfToken(), msg : temp});
 });
 
 // GET prediction page
