@@ -9,103 +9,180 @@
   </head>
   <body>
 
-  <ul class="nav nav-pills nav-justified">
-      <li><a href="/home">HOME</a></li>
-      <li><a href="/details">DETAILS</a></li>
-      <li  class="active"><a href="/grades">GRADES</a></li>
-      <li><a href="/predict">GRADES PREDICTION</a></li>
-      <li> <button type="button" class="btn btn-default btn-lg">
-              <span class="glyphicon glyphicon-user"></span> User
-          </button></li>
-  </ul>
+  <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-toggle"></span>
+              </button>
+              <a class="navbar-brand" href="#" style="color: #ffffff">Grade Predictor</a>
+          </div>
+          <div class="navbar-collapse collapse">
 
-  <div class="container">
-      <h2>Details</h2>
-      <p>This is your performance as of now</p>
-      <table class="table table-bordered table-hover">
-          <thead>
-          <tr>
-              <th class="mic">SI No.</th>
-              <th class="mic">Course Code</th>
-              <th class="mic">Course Title</th>
-              <th class="mic">Course Type</th>
-              <th class="mic">CAT-I<br>(Max. 50)</th>
-              <th class="mic">CAT-II<br>(Max. 50)</th>
-              <th class="mic">Quiz-I<br>(Max. 5)</th>
-              <th class="mic">Quiz-II<br>(Max. 5)</th>
-              <th class="mic">Quiz-III<br>(Max. 5)</th>
-              <th class="mic">Assignment<br>(Max. 5)</th>
-              <th class="mic">Lab<br>(Max. 50)</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-          </tbody>
-      </table>
+              <ul class="nav navbar-nav navbar-right">
+
+                  <li>
+                      <a role="button" href="/home"  style="color: #ffffff">
+                          <i class="glyphicon glyphicon-user"></i> Username</a>
+                  </li>
+              </ul>
+          </div>
+      </div><!-- /container -->
   </div>
+
+
+  <div class="row">
+      <div class="col-sm-3">
+          <!-- left -->
+          <h3><i class="glyphicon glyphicon-education"></i> Menu</h3>
+          <hr>
+
+          <ul class="nav nav-stacked">
+              <li><a href="/home"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+              <li><a href="/details"><i class="glyphicon glyphicon-th-list"></i> Details</a></li>
+              <li><a href="/grades"><i class="glyphicon glyphicon-flag"></i> Grades</a></li>
+              <li><a href="/predict"><i class="glyphicon glyphicon-blackboard"></i> Grades Predicted</a></li>
+              <li><a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+          </ul>
+
+          <hr>
+
+      </div><!-- /span-3 -->
+      <div class="col-sm-9">
+
+          <!-- column 2 -->
+          <h3><i class="glyphicon glyphicon-tree-conifer"></i> Score</h3>
+
+          <hr>
+
+          <div class="row">
+              <!-- center left-->
+              <div class="col-md-7">
+
+                  <div class="panel panel-default">
+                      <div class="panel-heading"><h4><span class="glyphicon glyphicon-bookmark"></span> Internals</h4></div>
+                      <div class="panel-body" id="tab">
+                          <table class="table table-bordered table-hover">
+                              <thead>
+                              <tr>
+                                  <th class="mic">SI No.</th>
+                                  <th class="mic">Course Code</th>
+                                  <th class="mic">Course Title</th>
+                                  <th class="mic">Course Type</th>
+                                  <th class="mic">CAT-I<br>(Max. 50)</th>
+                                  <th class="mic">CAT-II<br>(Max. 50)</th>
+                                  <th class="mic">Quiz-I<br>(Max. 5)</th>
+                                  <th class="mic">Quiz-II<br>(Max. 5)</th>
+                                  <th class="mic">Quiz-III<br>(Max. 5)</th>
+                                  <th class="mic">Assignment<br>(Max. 5)</th>
+                                  <th class="mic">Lab<br>(Max. 50)</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              </tbody>
+                          </table>
+
+                      </div><!--/panel-body-->
+                  </div><!--/panel-->
+
+              </div><!--/col-->
+
+              <!--center-right-->
+
+
+          </div><!--/row-->
+      </div><!--/col-span-9-->
+
+  </div><!--/row-->
+  <!-- /upper section -->
+
+
+  <!--/row-->
+
+  </div><!--/container-->
+  <hr>
+  <!--tabs-->
+
+  <!--/tabs-->
+  <div class="alert alert-info">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      Please remember to Logout for classified security.
+  </div>
+
+  <!-- /Main -->
+  <hr class="featurette-divider">
+
+  <footer class="text-center" style="margin-top: 50px">&copy;IWP Project Group - Vikram, Kunal and Tanuj</footer>
   </body>
 </html>
+
+
+
+
+
+
