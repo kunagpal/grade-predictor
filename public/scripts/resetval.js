@@ -13,10 +13,9 @@ function checkpswd() {
 function checkretype() {
     var pwd=document.getElementById("pwd").value;
     var rpwd=document.getElementById("rpwd").value;
+
     if (pwd!==rpwd) {
-
-        document.getElementById("rpwd").setAttribute("value","");
         window.alert("Please re-type the password correctly!");
+        document.getElementById("rpwd").value="";
     }
-
 }
