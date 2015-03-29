@@ -9,6 +9,7 @@ function checkpswd() {
         window.alert("Password too short!");
     else if (l>20)
         window.alert("Password too long!");
+    document.getElementById("pwd").style.padding = "15px";
 }
 function checkretype() {
     var pwd=document.getElementById("pwd").value;
@@ -18,4 +19,11 @@ function checkretype() {
         window.alert("Please re-type the password correctly!");
         document.getElementById("rpwd").value="";
     }
+    document.getElementById("rpwd").style.padding = "25px";
+}
+function big() {
+    document.getElementById("pwd").style.padding = "25px";
+}
+function big1() {
+    document.getElementById("rpwd").style.padding = "25px";
 }
