@@ -2,17 +2,17 @@
  * Created by Vikramraj on 29-Mar-15.
  */
 function checkid() {
-    var i = document.getElementById("uid");
+    var i = document.getElementById("rno");
     uid.setAttribute("pattern", "\d{2}\w{3}\d{4}");
-    document.getElementById("uid").style.padding = "15px";
+    document.getElementById("rno").style.padding = "15px";
 }
 
 function big() {
-    document.getElementById("uid").style.padding = "25px";
+    document.getElementById("rno").style.padding = "25px";
 }
-function big1() {
+function big2() {
     document.getElementById("eid").style.padding = "25px";
 }
-function small() {
+function small1() {
     document.getElementById("eid").style.padding = "15px";
 }
