@@ -5,7 +5,9 @@
     <link rel='stylesheet' href='/styles/loginstyle.css' />
     <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css' />
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+
     <script type="text/javascript" src="/bower_components/bootstrap/dist/css/bootstrap.min.js"></script>
+
   </head>
   <body>
   <div class="site-wrapper">
@@ -64,7 +66,10 @@
           </div>
       </div>
   </form>
-      <button type="button" id="bt" class="btn btn-default"><a style="text-decoration: none" href="/forgot"><b>Forgot Password</b></a></button>
+                  <button type="button" id ="bt" class="btn btn-default" title="Alert"
+                          data-container="body" data-toggle="popover" data-placement="right"
+                          data-content="You will receive an email on your registered Email ID."><a style="text-decoration: none" href="/forgot"><b>Forgot Password</b></a>
+                  </button>
   </div>
 
   <div class="mastfoot">
