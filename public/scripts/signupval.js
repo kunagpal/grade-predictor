@@ -1,4 +1,4 @@
-/**
+npm/**
  * Created by Vikramraj on 29-Mar-15.
  */
 
@@ -14,10 +14,9 @@ function checkpswd() {
 function checkretype() {
     var pwd=document.getElementById("pwd").value;
     var rpwd=document.getElementById("rpwd").value;
-if (pwd!==rpwd) {
 
-    document.getElementById("rpwd").setAttribute("value","");
-    window.alert("Please re-type the password correctly!");
-}
-
+    if (pwd!==rpwd) {
+        window.alert("Please re-type the password correctly!");
+        document.getElementById("rpwd").value="";
+    }
 }
