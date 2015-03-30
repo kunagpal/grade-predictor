@@ -39,6 +39,7 @@ router.get('/', function(req, res)
                 }
                 else
                 {
+                    console.log(doc);
                     res.render('index');
                 }
             });
@@ -152,7 +153,7 @@ router.post('/signup', function(req, res) {
                                 }
                                 else
                                 {
-                                    db.collection('users').insert(user, {w : 1}, function(err, docs){
+                                    db.collection('users').insertOne(user, function(err, docs){
                                         db.close();
                                         if(err)
                                         {
@@ -199,11 +200,11 @@ router.post('/forgot', function(req, res) {
                     ' reset your password.\nWe would love to have you back as a user.\n In the event that this password reset was not requested by you, please ignore this' +
                     ' message and your password shall remain intact.'
                 };
-                db.collection('users').findAndModify({email : req.body.email, _id : req.body.id}, [], {$set:{token : token, expire : Date.now() + 3600000}}, {}, function(err, doc){
+                db.collection('users').findOneAndUpdate({email : req.body.email, _id : req.body.id}, {$set:{token : token, expire : Date.now() + 3600000}}, {}, function(err, doc){
                     db.close();
                     if(err)
                     {
-                        console.log(err.message);x
+                        console.log(err.message);
                     }
                     else if(!doc)
                     {
@@ -242,7 +243,7 @@ router.post('/reset/:token', function(req, res) {
             {
                 var query = {token : req.params.token, expire : {$gt: Date.now()}},
                     op = {$set : {hash : bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))}, $unset : {token : '', expire : ''}};
-                db.collection('users').findAndModify(query, [], op, {}, function(err, doc) {
+                db.collection('users').findOneAndUpdate(query, op, {}, function(err, doc) {
                     db.close();
                     if(err)
                     {
