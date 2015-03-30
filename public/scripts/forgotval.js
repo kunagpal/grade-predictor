@@ -2,8 +2,8 @@
  * Created by Vikramraj on 29-Mar-15.
  */
 function checkid() {
-    var i = document.getElementById("rno");
-    uid.setAttribute("pattern", "\d{2}\w{3}\d{4}");
+    //var i = document.getElementById("rno");
+    document.getElementById("rno").setAttribute("pattern", "\d{2}\w{3}\d{4}");
     document.getElementById("rno").style.padding = "15px";
 }
 
