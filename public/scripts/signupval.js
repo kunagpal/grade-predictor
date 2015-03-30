@@ -1,4 +1,4 @@
-npm/**
+/**
  * Created by Vikramraj on 29-Mar-15.
  */
 
