@@ -8,7 +8,7 @@ function checkid() {
 }
 
 function big() {
-    document.getElementById("uid").style.padding = "25px";
+    document.getElementById("rno").style.padding = "25px";
 }
 function big1() {
     document.getElementById("eid").style.padding = "25px";
