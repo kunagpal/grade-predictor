@@ -4,7 +4,7 @@
 #img1, #img3 {
     position: relative;
     float: right;
-    padding: 5px;
+    padding: 10px;
     margin-right: 10px;
     width: auto;
 }
@@ -30,7 +30,7 @@ h3 {
 }
 #img2 {
 
-    padding: 5px;
+    padding: 10px;
     margin-left: 0px;
     clear: both;
     float:left;
