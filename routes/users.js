@@ -106,14 +106,14 @@ router.get('/home', function(req, res) {
 
 // GET help page
 router.get('/help', function(req, res) {
-    res.render('help');
+    res.render('help', {name : req.signedCookies.name});
 });
 
 // GET feedback page
 router.get('/feedback', function(req, res) {
     if(req.signedCookies.name)
     {
-        res.render('feedback', {token : req.csrfToken()});
+        res.render('feedback', {token : req.csrfToken(), name : req.signedCookies.name});
     }
     else
     {
