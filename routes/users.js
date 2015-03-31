@@ -3,14 +3,28 @@ var temp;
 
 // GET users listing.
 router.get('/grades', function(req, res){
+    if(req.signedCookies.name)
+    {
         res.render('grades');
+    }
+    else
+    {
+        res.redirect('/login');
+    }
 });
 
 //GET login page
 router.get('/login', function(req, res){
-        temp = req.session.msg ? req.session.msg : 0;
-        delete req.session.msg;
-        res.render('login', {token : req.csrfToken(), msg : temp});
+        if(req.signedCookies.name)
+        {
+            res.redirect('/home');
+        }
+        else
+        {
+            temp = req.session.msg ? req.session.msg : 0;
+            delete req.session.msg;
+            res.render('login', {token : req.csrfToken(), msg : temp});
+        }
 });
 
 //GET signup page
@@ -43,23 +57,44 @@ router.get('/forgot', function(req, res) {
 
 // GET details page
 router.get('/details', function(req, res) {
-    temp = req.session.msg ? req.session.msg : 0;
-    delete req.session.msg;
-    res.render('details', {token : req.csrfToken(), msg : temp});
+    if(req.signedCookies.name)
+    {
+        temp = req.session.msg ? req.session.msg : 0;
+        delete req.session.msg;
+        res.render('details', {token : req.csrfToken(), msg : temp});
+    }
+    else
+    {
+        res.redirect('/login');
+    }
 });
 
 // GET grades page
 router.get('/grades', function(req, res) {
-    temp = req.session.msg ? req.session.msg : 0;
-    delete req.session.msg;
-    res.render('grades', {token : req.csrfToken(), msg : temp});
+    if(req.signesCookies.name)
+    {
+        temp = req.session.msg ? req.session.msg : 0;
+        delete req.session.msg;
+        res.render('grades', {token : req.csrfToken(), msg : temp});
+    }
+    else
+    {
+        res.redirect('/login');
+    }
 });
 
 // GET prediction page
 router.get('/predict', function(req, res) {
-    temp = req.session.msg ? req.session.msg : 0;
-    delete req.session.msg;
-    res.render('predict', {token : req.csrfToken(), msg : temp});
+    if(req.signesCookies.name)
+    {
+        temp = req.session.msg ? req.session.msg : 0;
+        delete req.session.msg;
+        res.render('predict', {token : req.csrfToken(), msg : temp});
+    }
+    else
+    {
+        res.redirect('/login');
+    }
 });
 
 // GET details page
