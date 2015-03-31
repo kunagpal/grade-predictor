@@ -40,7 +40,7 @@ router.get('/', function(req, res)
                 else
                 {
                     console.log(doc);
-                    res.render('index');
+                    res.render('index', {name : req.signedCookies.name});
                 }
             });
         }
@@ -106,7 +106,7 @@ router.post('/login', function(req, res) {
                 {
                     if (bcrypt.compareSync(req.body.password, doc.hash))
                     {
-                        res.cookie('name', req.body.id, {maxAge: 0, signed: true, httpOnly : true});
+                        res.cookie('name', req.body.id, {maxAge: 86400000, signed : true});
                         res.redirect('/home');
                     }
                     else

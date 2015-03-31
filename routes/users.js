@@ -5,7 +5,7 @@ var temp;
 router.get('/grades', function(req, res){
     if(req.signedCookies.name)
     {
-        res.render('grades');
+        res.render('grades', {name : req.signedCookies.name});
     }
     else
     {
@@ -61,7 +61,7 @@ router.get('/details', function(req, res) {
     {
         temp = req.session.msg ? req.session.msg : 0;
         delete req.session.msg;
-        res.render('details', {token : req.csrfToken(), msg : temp});
+        res.render('details', {token : req.csrfToken(), msg : temp, name : req.signedCookies.name});
     }
     else
     {
@@ -75,7 +75,7 @@ router.get('/grades', function(req, res) {
     {
         temp = req.session.msg ? req.session.msg : 0;
         delete req.session.msg;
-        res.render('grades', {token : req.csrfToken(), msg : temp});
+        res.render('grades', {token : req.csrfToken(), msg : temp, name : req.signedCookies.name});
     }
     else
     {
@@ -85,11 +85,11 @@ router.get('/grades', function(req, res) {
 
 // GET prediction page
 router.get('/predict', function(req, res) {
-    if(req.signesCookies.name)
+    if(req.signedCookies.name)
     {
         temp = req.session.msg ? req.session.msg : 0;
         delete req.session.msg;
-        res.render('predict', {token : req.csrfToken(), msg : temp});
+        res.render('predict', {token : req.csrfToken(), msg : temp, name : req.signedCookies.name});
     }
     else
     {
@@ -97,17 +97,28 @@ router.get('/predict', function(req, res) {
     }
 });
 
-// GET details page
+// GET home page
 router.get('/home', function(req, res) {
     temp = req.session.msg ? req.session.msg : 0;
     delete req.session.msg;
-    res.render('home', {token : req.csrfToken(), msg : temp});
+    res.render('home', {token : req.csrfToken(), msg : temp, name : req.signedCookies.name});
 });
 
-router.get('/reset', function(req, res){
-    temp = req.session.msg ? req.session.msg : 0;
-    delete req.session.msg;
-    res.render('reset', {token : req.csrfToken(), msg : temp});
+// GET help page
+router.get('/help', function(req, res) {
+    res.render('help');
+});
+
+// GET feedback page
+router.get('/feedback', function(req, res) {
+    if(req.signedCookies.name)
+    {
+        res.render('feedback', {token : req.csrfToken()});
+    }
+    else
+    {
+        res.redirect('/login');
+    }
 });
 
 // Generic get route request handler
