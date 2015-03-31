@@ -2,13 +2,12 @@
 <html>
   <head>
     <title>help</title>
-      <link rel='stylesheet' href='/styles/detstyle.css' />
+      <link rel='stylesheet' href='/styles/helpstyle.css' />
     <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css' />
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
-  <!-- Header -->
   <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
       <div class="container">
           <div class="navbar-header">
@@ -31,13 +30,96 @@
   </div>
   <!-- /Header -->
 
+  <!-- Main -->
+  <div class="container">
 
-  <div class="alert alert-info">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      Please remember to Logout for classified security.
-  </div>
+      <!-- upper section -->
+      <div class="row">
+          <div class="col-sm-3">
+              <!-- left -->
+              <h3><i class="glyphicon glyphicon-education"></i> Menu</h3>
+              <hr>
+
+              <ul class="nav nav-stacked">
+                  <li><a href="/home"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                  <li><a href="/details"><i class="glyphicon glyphicon-th-list"></i> Details</a></li>
+                  <li><a href="/grades"><i class="glyphicon glyphicon-flag"></i> Grades</a></li>
+                  <li><a href="/predict"><i class="glyphicon glyphicon-blackboard"></i> Grades Predicted</a></li>
+                  <li><a href="/logout"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+              </ul>
+
+              <hr>
+
+          </div><!-- /span-3 -->
+          <div class="col-sm-9">
+
+              <!-- column 2 -->
+              <h3><i class="glyphicon glyphicon-globe"></i> Help and Support</h3>
+
+              <hr>
+
+              <div class="row">
+                  <!-- center left-->
+                  <div class="col-md-7">
+
+                      <div class="panel panel-info">
+                          <div class="panel-heading"><h4><span class="glyphicon glyphicon-question-sign"></span> FAQs</h4></div>
+                          <div class="panel-body">
+
+                              <p>This is a page to provide you with certain help with the details of this website. It has some Frequently Asked Questions (FAQs) as well to make your search for the answer easier.
+                              <hr>
+
+                              <dl>
+                                  <dt>How much accuracy is expected out of the predictions?</dt>
+                                  <dd>Basically, we provide you with probability of you getting that grade according to your performance and various other factors which are processed at our backend.</dd><br>
+                                  <dt>What are the parameters which are considered by the algorithm?</dt>
+                                  <dd>The algorithm which we use is purely mathematical and it takes into account various student factors like interest in the subject, marks (internals) and </dd>
+                              </dl>
+                              </p>
+
+                          </div><!--/panel-body-->
+                      </div><!--/panel-->
+
+                  </div><!--/col-->
+
+                  <!--center-right-->
+                  <div class="col-md-5">
+
+                      <ul class="nav nav-justified">
+                          <li><a title="Update Profile" href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
+                          <li><a title="Favourites" href="#"><i class="glyphicon glyphicon-heart"></i></a></li>
+                          <li><a title="See profile" href="/details"><i class="glyphicon glyphicon-user"></i></a></li>
+                          <li><a title="Feedback" data-toggle="modal" href="#"><span class="glyphicon glyphicon-pencil"></span></a></li>
+                      </ul>
+
+                      <hr>
+
+
+
+                      <div class="btn-group btn-group-justified">
+                          <a href="#" class="btn btn-info col-sm-3">
+                              <i class="glyphicon glyphicon-plus"></i><br>
+                              Services
+                          </a>
+                          <a href="#" class="btn btn-info col-sm-3">
+                              <i class="glyphicon glyphicon-cloud"></i><br>
+                              Integrate with <br>Cloud
+                          </a>
+                          <a href="#" class="btn btn-info col-sm-3">
+                              <i class="glyphicon glyphicon-question-sign"></i><br>
+                              Help
+                          </a>
+                      </div>
+
+                  </div><!--/col-span-6-->
+
+              </div><!--/row-->
+          </div><!--/col-span-9-->
+
+      </div>
+  </div><!--/container-->
   <!-- /Main -->
-<hr class="featurette-divider">
+  <hr class="featurette-divider">
 
   <footer class="text-center" style="margin-top: 50px">&copy;IWP Project Group - Vikram, Kunal and Tanuj</footer>
 
