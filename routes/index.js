@@ -1,10 +1,16 @@
+var bcrypt;
 var path = require('path');
 var crypto = require('crypto');
-var bcrypt = require('bcryptjs');
 var router = require('express').Router();
 var mongo = require('mongodb').MongoClient;
 var uri = process.env.MONGO || 'mongodb://127.0.0.1:27017/iwp';
 
+try {
+    bcrypt = require('bcrypt');
+}
+catch(err){
+    bcrypt = require('bcryptjs');
+}
 try{
     var key = require(path.join(__dirname, '..', 'key')).key;
 }
