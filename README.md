@@ -1,4 +1,6 @@
 # grade-predictor
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/kunagpal/grade-predictor.svg)](https://greenkeeper.io/)
 The source code repository for the grade-predictor initiative.
 
 #### The website shall be hosted [here] (https://www.gradepredictor.herokuapp.com)
